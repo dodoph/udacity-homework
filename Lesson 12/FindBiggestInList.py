@@ -1,7 +1,7 @@
-Find biggest in list在list找最大元素
+# Find biggest in list
 # Define a procedure, greatest,
 # that takes as input a list
-# of positive numbers！！, and
+# of positive numbers, and
 # returns the greatest number
 # in that list. If the input
 # list is empty, the output
