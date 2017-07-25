@@ -30,6 +30,7 @@ def freq_analysis(message):
 # string.find(string) return string which firstly appear in
 # this string. 
 # Key e = 'a', find 'a' in each index (star from 0 until len(n)-1)
+# 2 loops: for loop and while loop 
 
 #Tests
 
