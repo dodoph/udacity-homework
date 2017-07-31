@@ -12,22 +12,16 @@
 #
 
 def convert_seconds(time):
-    hour = int(time / 3600 % 60)
-    if hour == 0 and hour == 1:
+    x, y, z = ' hours', ' minutes', ' seconds'
+    hour = int(time / 3600)
+    if hour == 1:
         x = ' hour'
-    else:
-        x = ' hours'
-    minute = int((time / 60) % 60)
-    if minute == 0 and minute == 1:
+    minute = int((time % 3600) / 60)
+    if minute == 1:
         y = ' minute'
-    else:
-        y = ' minutes'
-    second = time % 60 
-    if second == 0 and second == 1:
+    second = time % 3600 % 60 
+    if second == 1:
         z = ' second'
-    else:
-        z = ' seconds'
-    
     return str(hour) + x + ', ' + str(minute) + y + ', ' + str(second) + z
     
 
