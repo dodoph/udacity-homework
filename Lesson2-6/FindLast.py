@@ -10,12 +10,12 @@
 
 
 def find_last(a, b):
-    last_pos = -1
+    pos = -1
     while True:
-        pos = a.find(b, last_pos+1)
-        if pos == -1:
-            return last_pos
-        last_pos = pos
+        new_pos = a.find(b, pos+1)
+        if new_pos == -1:
+            return pos
+        pos = new_pos
         
         
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
@@ -39,6 +39,9 @@ print find_last("", "3")
 
 print find_last("", "")
 #>>> 0
+
+
+
 
 
 
