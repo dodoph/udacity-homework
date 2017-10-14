@@ -65,20 +65,6 @@ def courses_offered(courses, hexamester):
 # Dictionary should have hexamesters as its keys, and each value should be a
 # list of courses that are offered that hexamester (the courses in the list
 # can be in any order).
-#method 1
-def involved(courses,person):
-    result = {}
-    for hexamester in courses:
-        list = []
-        for classes in courses[hexamester]:
-            if 'teacher' in courses[hexamester][classes] and courses[hexamester][classes]['teacher'] == person:
-                list.append(classes)
-                result[hexamester] = list
-            if 'assistant' in courses[hexamester][classes] and courses[hexamester][classes]['assistant'] == person:
-                list.append(classes)
-                result[hexamester] = list
-    return result
-#method 2
 def involved(courses,person):
     result = {}
     for hexamester in courses:

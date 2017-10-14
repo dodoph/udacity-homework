@@ -4,15 +4,15 @@
 # using that in both lookup and update.
 
 # Here are the original procedures:
-def check(htable, key):
+def find_entry(htable, key):
     bucket = hashtable_get_bucket(htable, key)
     for entry in bucket:
         if entry[0] == key:
             return entry
-
+#Thinking: find same parts. figure out what kinds of result you want
 def hashtable_update(htable, key, value):
-    if check(htable, key):
-        check(htable, key)[1] = value
+    if find_entry(htable, key):
+        find_entry(htable, key)[1] = value
         return
     hashtable_get_bucket(htable, key).append([key,value])
 
@@ -24,8 +24,8 @@ def hashtable_update(htable, key, value):
     # bucket.append([key, value])
 
 def hashtable_lookup(htable, key):
-    if check(htable, key):
-        return check(htable,key)[1]
+    if find_entry(htable, key):
+        return find_entry(htable,key)[1]
     return None
 
 
